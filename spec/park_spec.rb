@@ -36,14 +36,21 @@ RSpec.describe do
     vehicle_1.add_passenger(charlie)
     vehicle_1.add_passenger(jude)
     vehicle_1.add_passenger(taylor)
-
     park.add_vehicle(vehicle_1)
 
     expect(park.vehicles).to eq([vehicle_1])
     expect(park.passengers).to eq([charlie, jude, taylor])
+    vehicle_2 = Vehicle.new("2020", "Toyota", "Camry")
+    peter = Passenger.new({"name" => "Peter", "age" => 22})
+    ben = Passenger.new({"name" => "Ben", "age" => 50})
+    may = Passenger.new({"name" => "May", "age" => 48})
+    vehicle_2.add_passenger(peter)
+    vehicle_2.add_passenger(ben)
+    vehicle_2.add_passenger(may)
+    park.add_vehicle(vehicle_2)
 
-    # expect(park.vehicles).to eq([])
-    # expect(park.passengers).to eq([])
+    expect(park.vehicles).to eq([vehicle_1, vehicle_2])
+    expect(park.passengers).to eq([charlie, jude, taylor, peter, ben, may])
     end
 
     it "can collect revenue from adults" do
