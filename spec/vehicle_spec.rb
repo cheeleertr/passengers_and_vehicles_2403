@@ -20,18 +20,18 @@ RSpec.describe do
       expect(vehicle.speeding?).to eq(true)
     end
 
-    # it "can add passengers" do
-    #   vehicle = Vehicle.new("2001", "Honda", "Civic")
+    it "can add passengers" do
+      vehicle = Vehicle.new("2001", "Honda", "Civic")
 
-    #   expect(vehicle.passengers).to eq([])
-    #   charlie = Passenger.new({"name" => "Charlie", "age" => 18})
-    #   jude = Passenger.new({"name" => "Jude", "age" => 20})
-    #   taylor = Passenger.new({"name" => "Taylor", "age" => 12})
-    #   vehicle.add_passenger(charlie)
-    #   vehicle.add_passenger(jude)
-    #   vehicle.add_passenger(taylor)
+      expect(vehicle.passengers).to eq([])
+      charlie = Passenger.new({"name" => "Charlie", "age" => 18})
+      jude = Passenger.new({"name" => "Jude", "age" => 20})
+      taylor = Passenger.new({"name" => "Taylor", "age" => 12})
+      vehicle.add_passenger(charlie)
+      vehicle.add_passenger(jude)
+      vehicle.add_passenger(taylor)
 
-    #   expect(vehicle.passengers).to eq([charlie, jude, taylor])
-    #   expect(vehicle.num_adults).to eq(3)
-    # end
+      expect(vehicle.passengers).to eq([charlie, jude, taylor])
+      expect(vehicle.num_adults).to eq(2)
+    end
   end
