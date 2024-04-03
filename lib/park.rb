@@ -1,7 +1,16 @@
 class Park
-  attr_reader
+  attr_reader :name,
+              :admission,
+              :vehicles,
+              :passengers,
+              :revenue
 
-  def initialize
-    
+  def initialize(name, admission)
+    @name = name
+    @admission = admission
+    @vehicles = []
+    @passengers = []
+    @revenue = 0
   end
+
 end
