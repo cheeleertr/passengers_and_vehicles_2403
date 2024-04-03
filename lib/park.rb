@@ -13,4 +13,10 @@ class Park
     @revenue = 0
   end
 
+  def add_vehicle(vehicle)
+    @vehicles << vehicle
+    vehicle.passengers.map do |passenger|
+      @passengers << passenger
+    end
+  end
 end
