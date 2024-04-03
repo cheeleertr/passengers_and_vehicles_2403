@@ -12,7 +12,8 @@ RSpec.describe do
       expect(charlie.age).to eq(18)
       expect(charlie.adult?).to eq(true)
       expect(taylor.adult?).to eq(false)
-      # expect(charlie.driver?).to eq(false)
-      # expect(charlie.drive).to eq(true)
-  end
+      expect(charlie.driver?).to eq(false)
+      expect(charlie.drive).to eq(true)
+      expect(charlie.driver?).to eq(true)
+    end
   end
