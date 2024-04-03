@@ -15,8 +15,11 @@ class Park
 
   def add_vehicle(vehicle)
     @vehicles << vehicle
+
     vehicle.passengers.map do |passenger|
       @passengers << passenger
     end
+
+    @revenue += vehicle.num_adults * @admission
   end
 end
