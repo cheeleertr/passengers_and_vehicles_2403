@@ -3,7 +3,7 @@ class Patron
               :attendees,
               :adults,
               :minors
-              
+
   def initialize
     @parks = []
     @attendees = []
@@ -13,5 +13,6 @@ class Patron
 
   def add_park(park)
     @parks << park
+    
   end
 end
